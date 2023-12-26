@@ -1,6 +1,5 @@
 % Clearing Screen
-clc
-
+clc;
 % Setting x as symbolic variable
 syms x;
 
