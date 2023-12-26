@@ -24,7 +24,7 @@ while(fa*fb>0)
     fa = eval(subs(y,x,a));
     fb = eval(subs(y,x,b));
 end
-
+    %c = a - ((a-b)*fa) /(fa-fb);
     c = (b*fa - a*fb)/(fa-fb);
     fc = eval(subs(y,x,c));
     fprintf('\n\na\t\t\tb\t\t\tc\t\t\tf(c)\n');
@@ -35,6 +35,7 @@ end
         else
             a =c;
         end
+        %c = a - ((a-b)*fa)/(fa-fb);
         c = (b*fa - a*fb)/(fa-fb);
         fc = eval(subs(y,x,c));
     end
