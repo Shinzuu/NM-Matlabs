@@ -1,0 +1,29 @@
+clc;
+y = input('Please Enter the size of the equation system n =');
+C = input('Please Enter the elements of Matrix C');
+b = input('Please Enter the emelents of Matrix B');
+dett = det(C);
+if dett==0
+    print('This system unsolvable becaue det(c)=0');
+else
+    a = [C d]
+end
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+[m,n] = size(a);
+for j=1:m-1
+    for z=2:m
+        if a(j,j)==0
+            t=a(j,:);a(j,:)=a(z,:);
+            a(z,:)=t;
+        end
+    end
+    for i=j+1:m
+        a(i,:)=a(i,:)-a(j,:)*(a(i,j)/a(j,j));
+    end;
+    x=zeros(1,m);
+    for s=m:-1:1
+        c=0;
+        for k=2:m
+            c=c+a(s,k)*x(k);
+        end
+    
